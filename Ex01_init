@@ -7,12 +7,12 @@
 3. 셋팅할 때 커맨드
      - git init
      - git remote add origin [깃허브 주소]
-     - git add
+     - git add .
      - git commit -m "첫번째 히스토리"
      - git push origin master
         > 브라우저 인증 뜨면 클릭 후 진행
 
 4. 깃허브에 코드 올릴 때 커맨드
-     - git add
+     - git add .
      - git commit -m "기록용 말 아무거나"
      - git push origin master

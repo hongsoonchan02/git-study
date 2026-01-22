@@ -65,25 +65,7 @@ CREATE TABLE member_primary(
 CREATE TABLE board_foreign(
 	board_foreign_id int PRIMARY KEY AUTO_INCREMENT,
 	title varchar(300),
-	writer_id int,
-	CONSTRAINT fk_writer FOREIGN KEY (writer_id)
-	REFERENCES member_primary(member_primary_id)
-	ON DELETE CASCADE 
-	);
+	writer_id int REFERENCES member_primary(member_primary_id));
 
-INSERT INTO member_primary(id)
-values('test1'),
-	  ('test2'),
-	  ('test3');
-
-INSERT INTO board_foreign(title, writer_id) VALUES('게시금 제목!!', 1);
-
-SELECT * FROM member_primary;
-SELECT * FROM board_foreign;
-
-DELETE FROM member_primary
-WHERE member_primary_id = 1;
-
-DROP TABLE board_foreign;
-
+in
 

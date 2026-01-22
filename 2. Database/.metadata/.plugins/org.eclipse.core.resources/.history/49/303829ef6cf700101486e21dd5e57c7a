@@ -41,7 +41,7 @@ UPDATE titles
 SET title = 'Senior Engineer' WHERE emp_no = 499001;
 
 DELETE FROM salaries WHERE emp_no = 10013;
-DELETE FROM employees WHERE emp_no = 10013  ;
+DELETE FROM employees WHERE emp_no = 10013;
 
 SELECT * FROM salaries WHERE emp_no = 10013;
 SELECT * FROM employees WHERE emp_no = 10013;

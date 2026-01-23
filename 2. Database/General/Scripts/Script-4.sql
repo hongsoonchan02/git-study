@@ -1,0 +1,62 @@
+SELECT * FROM employees
+ORDER BY birth_date DESC;
+
+SELECT * FROM titles
+ORDER BY to_date DESC;
+
+SELECT max(salary) FROM salaries;
+SELECT min(salary) FROM salaries;
+SELECT avg(salary) FROM salaries;
+SELECT sum(salary) FROM salaries;
+SELECT count(*) FROM salaries;
+
+SELECT count(*) AS '직원 수' FROM employees;
+
+SELECT count(*) FROM titles t 
+WHERE title = 'Engineer';
+
+SELECT count(*) FROM employees
+WHERE hire_date > '1965-01-01';
+
+SELECT max(emp_no), min(emp_no) FROM employees;
+
+SELECT max(emp_no), birth_date FROM employees
+GROUP BY birth_date;
+
+-- 부서별 직원 수 구하기
+SELECT count(*), dept_no FROM dept_emp
+GROUP BY dept_no;
+
+SELECT count(*) AS "cnt", gender FROM employees
+GROUP BY gender;
+
+SELECT count(*) AS '직원 수', title FROM titles t 
+GROUP BY title
+ORDER BY title DESC;
+
+SELECT count(*) AS '직원 수', title FROM titles t 
+GROUP BY title
+HAVING count(*) >= 100000
+ORDER BY title DESC;
+
+SELECT count(*), dept_no FROM dept_emp
+group BY dept_no
+HAVING count(*) >= 50000;
+
+-- 현재 재직중인 직원들 중 직무별 직원 수가 200명 미만인 직무만 조회
+SELECT count(*), title FROM titles
+WHERE to_date = '9999-01-01'
+GROUP BY title 
+HAVING count(*) < 200;
+
+
+
+
+
+
+
+
+
+
+
+

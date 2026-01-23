@@ -61,15 +61,6 @@ WHERE first_name LIKE '_di';
 SELECT * FROM employees
 WHERE first_name LIKE 'G__';
 
-SELECT * FROM titles
-WHERE TO_date IS NULL;
-
-SELECT * FROM titles t 
-WHERE TO_date IS NOT NULL;
-
-SELECT * FROM departments d 
-WHERE dept_no IN('d005', 'd009');
-
 
 
 

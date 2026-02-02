@@ -23,6 +23,7 @@ public class Ex18_Filed {
 		
 		Ex18_2_Person jjangu = new Ex18_2_Person("신짱구", 5, "인천", "010-1234-1234");
 		Ex18_2_Person minsu = new Ex18_2_Person("김민수", 5);
+		Ex18_2_Person soonchan = new Ex18_2_Person("홍순찬");
 		
 //		jjangu.name = "짱구";
 //		jjangu.age = 19;
@@ -36,6 +37,8 @@ public class Ex18_Filed {
 //		minsu.addr = "서울시";
 //		minsu.phone = "010-8754-9678";
 		minsu.introduce();
+		
+		soonchan.introduce();
 		
 		System.out.println(Ex18_2_Person.HOBBY);
 		
